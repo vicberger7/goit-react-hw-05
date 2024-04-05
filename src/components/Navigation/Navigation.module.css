@@ -1,0 +1,22 @@
+.nav {
+  padding: 20px;
+  border-bottom: 1px solid black;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.listItem {
+  font-weight: 500;
+}
+.link {
+  text-decoration: none;
+  color: black;
+}
+.link:hover {
+  color: red;
+  text-decoration: underline;
+}

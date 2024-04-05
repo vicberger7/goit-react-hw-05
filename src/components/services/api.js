@@ -1,14 +1,18 @@
 import axios from "axios";
 
-const API_KEY = "LzoDWcfu-nIfccjYBx8KFi7DskdPURuJ4Wz_JNn2SoY";
-axios.defaults.baseURL = "https://api.unsplash.com/";
-axios.defaults.headers.common["Authorization"] = `Client-ID ${API_KEY}`;
-axios.defaults.params = {
-  per_page: 15,
+const url =
+  "https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1";
+
+const options = {
+  headers: {
+    // Замість api_read_access_token вставте свій токен
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlZmIxNzMxYjhkYzM3NjE0NTgzNTkwMTVjMDM4NjY0MCIsInN1YiI6IjY2MGQ3Y2VlMGI1ZmQ2MDE3YzM5NzQ5NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GPXeMjRe-hdLn69UH8Khpx_YTJT4p492TOXh-6gC9rs",
+  },
 };
-export const getImages = async (query, page) => {
-  const { data } = await axios.get(
-    `/search/photos?query=${query}&page=${page}`
-  );
-  return data;
-};
+
+axios
+  .get(url, options)
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err));
+console.log(url);
