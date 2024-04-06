@@ -1,10 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
 import MovieList from "../components/MovieList/MovieList";
+import { useSearchParams } from "react-router-dom";
 
 function MoviesPage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleSearch = () => {
     axios
@@ -19,6 +21,7 @@ function MoviesPage() {
       )
       .then((response) => {
         setSearchResults(response.data.results);
+        setSearchParams({ query: searchQuery });
       })
       .catch((error) => {
         console.error("Error searching movies:", error);
