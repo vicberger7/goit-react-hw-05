@@ -1,0 +1,30 @@
+.movieDetailsPoster {
+  max-width: 400px;
+  max-height: 400px;
+}
+.movieDetails {
+  padding: 0 0 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.movieDetailsInfo {
+  display: flex;
+  flex-direction: column;
+}
+.movieDetailsContainer {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid black;
+}
+.genresList {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+.addInfo {
+  border-bottom: 1px solid black;
+}
+.navInfo {
+  color: blue;
+}

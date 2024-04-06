@@ -16,7 +16,6 @@
   text-decoration: none;
   color: black;
 }
-.link:hover {
+.active {
   color: red;
-  text-decoration: underline;
 }
