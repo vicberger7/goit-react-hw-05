@@ -8,7 +8,7 @@ import {
   useParams,
 } from "react-router-dom";
 import css from "./MovieDetailsPage.module.css";
-import Loader from "../components/Loader/Loader";
+import Loader from "../../components/Loader/Loader";
 
 function MovieDetailsPage() {
   const { movieId } = useParams();

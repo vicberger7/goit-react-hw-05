@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import MovieList from "../components/MovieList/MovieList";
+import MovieList from "../../components/MovieList/MovieList";
 import { useSearchParams } from "react-router-dom";
 
 function MoviesPage() {
